@@ -13,9 +13,9 @@ NetLib is a cross-platform C++ library designed as a simple wrapper for "sys/soc
 This library uses CMake for cross-platform support.
 
 1. Navigate to the build folder:
-   ```bash
-   cd build
-   ```
+```bash
+cd build
+```
 
 2. Generate the build files (this example uses Ninja):
 ```bash

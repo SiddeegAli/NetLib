@@ -19,6 +19,18 @@ if(BUILD_EXAMPLES)
 
     target_include_directories(server PUBLIC include)
     target_include_directories(client PUBLIC include)
+
+    set_target_properties(server PROPERTIES
+        ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
+        LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
+        RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
+    )
+
+    set_target_properties(client PROPERTIES
+        ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
+        LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
+        RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
+    )
 endif()
 
 

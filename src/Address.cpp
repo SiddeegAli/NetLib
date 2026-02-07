@@ -4,7 +4,7 @@ Siddeeg::Net::Address::Address(const char* ip, uint16_t port): m_ip(ip), m_port(
     memset(&m_sockaddr, 0, sizeof(m_sockaddr));
     m_sockaddr.sin_family = AF_INET;
     m_sockaddr.sin_port = htons(port);
-    if (ip != '\0'){
+    if (*ip != '\0'){
         if (inet_pton(AF_INET, ip, &m_sockaddr.sin_addr) <= 0){
             m_vaild = false;
         }else{

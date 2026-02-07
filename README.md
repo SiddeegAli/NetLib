@@ -15,8 +15,7 @@ This library uses CMake for cross-platform support.
 1. Navigate to the build folder:
    ```bash
    cd build
-
-```
+   ```
 
 2. Generate the build files (this example uses Ninja):
 ```bash

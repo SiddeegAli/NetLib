@@ -2,6 +2,7 @@
 #ifdef _WIN32
     #include<WinSock2.h>
 	#include<WS2tcpip.h>
+	#include<cstdint>
 	#define s_addr S_un.S_addr
 	using socket_t = SOCKET;
 	const socket_t invalid_socket = INVALID_SOCKET;

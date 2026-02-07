@@ -39,7 +39,7 @@ void print_error() {
 }
 
 
-void platform_cleanup() {
+void platform_terminate() {
 #ifdef _WIN32
     WSACleanup();
 #endif

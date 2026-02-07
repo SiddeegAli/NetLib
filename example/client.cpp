@@ -4,6 +4,7 @@
 using namespace Siddeeg::Net;
 
 int main(){
+    platform_init();
     TCPSocket client;
 
     if(!client.connect({"127.0.0.1", 8080})){
@@ -22,4 +23,5 @@ int main(){
     buffer[bytes_received] = '\0';
 
     std::cout << "Received from server: " << buffer << std::endl;
+    platform_terminate();
 }

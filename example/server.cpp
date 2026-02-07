@@ -4,6 +4,7 @@
 using namespace Siddeeg::Net;
 
 int main(){
+    platform_init();
     TCPSocket server;
 
     if(!server.bind({"", 8080})){
@@ -34,5 +35,5 @@ int main(){
         print_error();
         return -4;
     }
-
+    platform_terminate();
 }

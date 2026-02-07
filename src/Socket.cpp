@@ -1,6 +1,10 @@
-#include<sokcet.h>
+#include<socket.h>
 
-Siddeeg::Net::Socket::Socket(socket_t socket):m_socket(socket){}
+Siddeeg::Net::Socket::Socket(socket_t socket):m_socket(socket){
+    if(socket == invalid_socket){
+        init();
+    }
+}
 
 bool Siddeeg::Net::Socket::init(){
     m_socket = socket(AF_INET, SOCK_STREAM, 0);
